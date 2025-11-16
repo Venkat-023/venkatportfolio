@@ -159,7 +159,7 @@ const Projects = () => {
             size="lg"
             className="bg-primary hover:bg-primary/90 glow-cyan"
           >
-            <a href="https://github.com/venkatbabayemineni" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Venkat-023?tab=repositories" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2" size={20} />
               View All Projects on GitHub
             </a>
