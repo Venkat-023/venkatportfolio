@@ -48,7 +48,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             {/* GitHub */}
             <a
-              href="https://github.com/venkatbabayemineni"
+              href="https://github.com/Venkat-023?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card p-8 rounded-2xl hover-lift group cursor-pointer border-2 border-primary/30 hover:border-primary transition-all"
@@ -67,7 +67,7 @@ const Home = () => {
 
             {/* LeetCode */}
             <a
-              href="https://leetcode.com/venkatbaba"
+              href="https://leetcode.com/u/Venkat_Baba/"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card p-8 rounded-2xl hover-lift group cursor-pointer border-2 border-accent/30 hover:border-accent transition-all"
@@ -86,7 +86,7 @@ const Home = () => {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/venkatbabayemineni"
+              href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6bems%2BcLQtmzBT1UYU7wWQ%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-card p-8 rounded-2xl hover-lift group cursor-pointer border-2 border-secondary/30 hover:border-secondary transition-all"

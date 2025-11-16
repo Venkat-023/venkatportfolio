@@ -162,7 +162,7 @@ const Contact = () => {
               </h2>
               <div className="space-y-4">
                 <a
-                  href="https://github.com/venkatbabayemineni"
+                  href="https://github.com/Venkat-023?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-primary/10 border border-border hover:border-primary transition-all group"
@@ -176,7 +176,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://leetcode.com/venkatbaba"
+                  href="https://leetcode.com/u/Venkat_Baba/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-accent/10 border border-border hover:border-accent transition-all group"
@@ -190,7 +190,7 @@ const Contact = () => {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/venkatbabayemineni"
+                  href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6bems%2BcLQtmzBT1UYU7wWQ%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 rounded-lg bg-muted/30 hover:bg-secondary/10 border border-border hover:border-secondary transition-all group"

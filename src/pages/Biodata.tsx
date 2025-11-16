@@ -63,12 +63,12 @@ const Biodata = () => {
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">LinkedIn</td>
                 <td className="py-4">
                   <a
-                    href="https://linkedin.com/in/venkatbabayemineni"
+                    href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6bems%2BcLQtmzBT1UYU7wWQ%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-secondary hover:underline"
                   >
-                    linkedin.com/in/venkatbabayemineni
+                    linkedin.com/in/venkat-baba-yemineni-49a7612b4
                   </a>
                 </td>
               </tr>

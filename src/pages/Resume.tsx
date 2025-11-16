@@ -24,7 +24,7 @@ const Resume = () => {
           {/* Social Badges */}
           <div className="flex flex-wrap justify-center gap-4 mt-6">
             <a
-              href="https://github.com/venkatbabayemineni"
+              href="https://github.com/Venkat-023?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 glass-card px-6 py-3 rounded-lg hover:border-primary hover:glow-cyan transition-all"
@@ -33,7 +33,7 @@ const Resume = () => {
               <span className="font-semibold">GitHub - 25+ Projects</span>
             </a>
             <a
-              href="https://leetcode.com/venkatbaba"
+              href="https://leetcode.com/u/Venkat_Baba/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 glass-card px-6 py-3 rounded-lg hover:border-accent hover:glow-orange transition-all"
@@ -42,7 +42,7 @@ const Resume = () => {
               <span className="font-semibold">LeetCode - 650+ Solved</span>
             </a>
             <a
-              href="https://linkedin.com/in/venkatbabayemineni"
+              href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6bems%2BcLQtmzBT1UYU7wWQ%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 glass-card px-6 py-3 rounded-lg hover:border-secondary hover:glow-blue transition-all"
