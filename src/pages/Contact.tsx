@@ -184,7 +184,7 @@ const Contact = () => {
                   <Code2 className="w-8 h-8 text-accent group-hover:glow-orange transition-all" />
                   <div className="flex-1">
                     <p className="font-semibold text-foreground">LeetCode</p>
-                    <p className="text-sm text-muted-foreground">650+ Problems Solved</p>
+                    <p className="text-sm text-muted-foreground">800+ Problems Solved</p>
                   </div>
                   <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </a>
