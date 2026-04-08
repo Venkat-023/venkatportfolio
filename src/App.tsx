@@ -10,6 +10,7 @@ import Resume from "./pages/Resume";
 import Biodata from "./pages/Biodata";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
+import Achievements from "./pages/Achievements";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
