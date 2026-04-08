@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Github, Code2, Linkedin, FileText, Briefcase, Trophy } from 'lucide-react';
+import { Github, Code2, Linkedin, FileText, Briefcase, Trophy, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -8,9 +8,8 @@ const Home = () => {
   const [githubCount, setGithubCount] = useState(0);
 
   useEffect(() => {
-    // Animate counters
-    const leetcodeTarget = 650;
-    const githubTarget = 25;
+    const leetcodeTarget = 800;
+    const githubTarget = 30;
     const duration = 2000;
     const steps = 60;
     const leetcodeIncrement = leetcodeTarget / steps;
@@ -44,9 +43,8 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Social Stats - Prominent & Clickable */}
+          {/* Social Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {/* GitHub */}
             <a
               href="https://github.com/Venkat-023?tab=repositories"
               target="_blank"
@@ -57,7 +55,7 @@ const Home = () => {
                 <Github className="w-16 h-16 text-primary group-hover:glow-cyan transition-all" />
                 <div className="text-center">
                   <p className="text-4xl font-display font-bold text-primary">{githubCount}+</p>
-                  <p className="text-lg text-muted-foreground mt-2">ML Projects</p>
+                  <p className="text-lg text-muted-foreground mt-2">ML/AI Projects</p>
                   <Button variant="outline" className="mt-4 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                     View GitHub
                   </Button>
@@ -65,7 +63,6 @@ const Home = () => {
               </div>
             </a>
 
-            {/* LeetCode */}
             <a
               href="https://leetcode.com/u/Venkat_Baba/"
               target="_blank"
@@ -84,7 +81,6 @@ const Home = () => {
               </div>
             </a>
 
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6bems%2BcLQtmzBT1UYU7wWQ%3D%3D"
               target="_blank"
@@ -120,13 +116,24 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* Achievement Badge */}
-          <div className="glass-card p-6 rounded-xl mt-12 inline-block animate-glow">
-            <div className="flex items-center gap-3">
-              <Trophy className="text-accent w-8 h-8" />
-              <div className="text-left">
-                <p className="text-sm text-muted-foreground">Amazon ML Hackathon 2025</p>
-                <p className="font-bold text-lg text-accent">Rank #1693 / 82,790</p>
+          {/* Achievement Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mt-12">
+            <div className="glass-card p-6 rounded-xl animate-glow">
+              <div className="flex items-center gap-3">
+                <Trophy className="text-accent w-8 h-8" />
+                <div className="text-left">
+                  <p className="text-sm text-muted-foreground">Amazon ML Hackathon 2025</p>
+                  <p className="font-bold text-lg text-accent">Rank #1693 / 82,790</p>
+                </div>
+              </div>
+            </div>
+            <div className="glass-card p-6 rounded-xl animate-glow">
+              <div className="flex items-center gap-3">
+                <Award className="text-primary w-8 h-8" />
+                <div className="text-left">
+                  <p className="text-sm text-muted-foreground">CodeWar — IIT Ropar (CodeChef)</p>
+                  <p className="font-bold text-lg text-primary">Rank #4367 / 32,000+</p>
+                </div>
               </div>
             </div>
           </div>
@@ -146,9 +153,9 @@ const Home = () => {
               'Deep Learning',
               'TensorFlow',
               'Computer Vision',
-              'Data Science',
-              'Neural Networks',
-              'Problem Solving',
+              'FastAPI & REST',
+              'Docker & AWS',
+              'NLP & Transformers',
             ].map((skill) => (
               <div
                 key={skill}

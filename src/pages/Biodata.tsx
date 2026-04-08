@@ -37,27 +37,38 @@ const Biodata = () => {
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Specialization</td>
-                <td className="py-4 text-foreground">Deep Learning, Computer Vision, Data Science</td>
+                <td className="py-4 text-foreground">Deep Learning, Computer Vision, NLP, Data Science</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Programming</td>
-                <td className="py-4 text-foreground">Python, Java, C</td>
+                <td className="py-4 text-foreground">Python (Proficient), Java, C</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Backend & Cloud</td>
+                <td className="py-4 text-foreground">FastAPI, REST, Docker, AWS (EC2, S3, Lambda)</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">LeetCode</td>
-                <td className="py-4 text-foreground">650+ Problems Solved</td>
+                <td className="py-4 text-foreground">800+ Problems Solved</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">GitHub</td>
-                <td className="py-4 text-foreground">25+ ML/AI Projects</td>
+                <td className="py-4 text-foreground">30+ ML/AI Projects</td>
               </tr>
               <tr className="border-b border-border/50">
-                <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Key Achievement</td>
-                <td className="py-4 text-foreground">Rank #1693 / 82,790 - Amazon ML Hackathon 2025</td>
+                <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Key Achievements</td>
+                <td className="py-4 text-foreground">
+                  Amazon ML Hackathon 2025 — Rank #1693 / 82,790<br />
+                  CodeWar IIT Ropar — Rank #4367 / 32,000+
+                </td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Domains</td>
                 <td className="py-4 text-foreground">Medical, Cybersecurity, Automobile, Education, Robotics, Agriculture, Sales</td>
+              </tr>
+              <tr className="border-b border-border/50">
+                <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Volunteer</td>
+                <td className="py-4 text-foreground">Volunteer Teacher at U&I for underprivileged students</td>
               </tr>
               <tr>
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">LinkedIn</td>
@@ -68,7 +79,7 @@ const Biodata = () => {
                     rel="noopener noreferrer"
                     className="text-secondary hover:underline"
                   >
-                    linkedin.com/in/venkat-baba-yemineni-49a7612b4
+                    linkedin.com/in/venkat-baba-yemineni
                   </a>
                 </td>
               </tr>
