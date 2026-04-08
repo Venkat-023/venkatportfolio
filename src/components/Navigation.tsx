@@ -17,8 +17,9 @@ const Navigation = () => {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/resume', label: 'Resume' },
-    { to: '/biodata', label: 'Bio-data' },
     { to: '/projects', label: 'Projects' },
+    { to: '/achievements', label: 'Achievements' },
+    { to: '/biodata', label: 'Bio-data' },
     { to: '/contact', label: 'Contact' },
   ];
 
