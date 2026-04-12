@@ -1,4 +1,4 @@
-import { Trophy, Award, GraduationCap, Shield, Code2, Brain, Cpu, Cloud, FileText } from 'lucide-react';
+import { Trophy, Award, GraduationCap, Shield, Code2, Brain, Cpu, Cloud, FileText, ExternalLink } from 'lucide-react';
 
 const Achievements = () => {
   const hackathons = [
@@ -26,10 +26,17 @@ const Achievements = () => {
       highlight: true,
     },
     {
-      title: 'AWS Summit & Kharagpur Data Science Hackathon',
+      title: 'AWS Summit',
+      org: 'Amazon Web Services (AWS)',
+      result: 'Participant',
+      description: 'AWS Summit focused on cloud computing technologies and services.',
+      date: 'Jan 2026',
+    },
+    {
+      title: 'Kharagpur Data Science Hackathon',
       org: 'Indian Institute of Technology, Kharagpur',
       result: 'Participation Certificate',
-      description: 'Data Science hackathon at IIT Kharagpur AWS Summit.',
+      description: 'Data Science hackathon at IIT Kharagpur focused on real-world data challenges.',
       date: 'Jan 2026',
     },
     {
@@ -63,6 +70,7 @@ const Achievements = () => {
       date: 'Jun 2025',
       skills: ['Cloud Computing'],
       category: 'Cloud',
+      link: 'https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4/',
     },
     {
       title: 'Machine Learning',
@@ -206,6 +214,12 @@ const Achievements = () => {
                       </span>
                     ))}
                   </div>
+                  {cert.link && (
+                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors mt-1">
+                      <ExternalLink className="w-3 h-3" />
+                      View Credential
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

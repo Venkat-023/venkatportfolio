@@ -10,7 +10,7 @@ const Publications = () => {
       abstract:
         'Understanding the amount of electricity that people will consume becomes extremely important in operating a smart grid, scheduling the utilization of renewable energy, as well as ensuring that the entire process remains stable. In this project, we employed machine-learning based on the forecasting of electricity demand based on a 5 year history of hourly smart-grid data. We compared ensemble models such as Random Forest, Extra Trees, Gradient Boosting, LightGBM, and XGBoost using MAE and RMSE. XGBoost presented the lowest MAE of 2236.70, and Gradient Boosting presented the lowest RMSE of 3192.55. A full-stack system consisting of FastAPI (backend) and Streamlit (frontend) was used to deploy the winning model. The system achieves MAE not much more than 2.7% of the average demand, demonstrating that machine learning may be used to forecast smart-grid use in real-time.',
       techStack: ['XGBoost', 'LightGBM', 'FastAPI', 'Streamlit', 'Optuna', 'scikit-learn'],
-      link: '',
+      link: 'http://hbrppublication.com/OJS/index.php/JACNS/article/view/9490',
     },
   ];
 
