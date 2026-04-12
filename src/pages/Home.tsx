@@ -8,7 +8,7 @@ const Home = () => {
   const [githubCount, setGithubCount] = useState(0);
 
   useEffect(() => {
-    const leetcodeTarget = 800;
+    const leetcodeTarget = 870;
     const githubTarget = 30;
     const duration = 2000;
     const steps = 60;
