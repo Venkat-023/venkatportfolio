@@ -26,10 +26,17 @@ const Achievements = () => {
       highlight: true,
     },
     {
-      title: 'AWS Summit & Kharagpur Data Science Hackathon',
+      title: 'AWS Summit',
+      org: 'Amazon Web Services (AWS)',
+      result: 'Participant',
+      description: 'AWS Summit focused on cloud computing technologies and services.',
+      date: 'Jan 2026',
+    },
+    {
+      title: 'Kharagpur Data Science Hackathon',
       org: 'Indian Institute of Technology, Kharagpur',
       result: 'Participation Certificate',
-      description: 'Data Science hackathon at IIT Kharagpur AWS Summit.',
+      description: 'Data Science hackathon at IIT Kharagpur focused on real-world data challenges.',
       date: 'Jan 2026',
     },
     {
@@ -63,6 +70,7 @@ const Achievements = () => {
       date: 'Jun 2025',
       skills: ['Cloud Computing'],
       category: 'Cloud',
+      link: 'https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4/',
     },
     {
       title: 'Machine Learning',
