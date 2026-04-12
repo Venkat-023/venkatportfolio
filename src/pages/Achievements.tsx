@@ -20,7 +20,7 @@ const Achievements = () => {
     {
       title: 'CodeWar — IIT Ropar',
       org: 'IIT Ropar (CodeChef)',
-      result: 'Rank #4367 / 32,000+',
+      result: 'Rank #3593 / 32,000+',
       description: 'National-level competitive programming contest on CodeChef.',
       date: '2026',
       highlight: true,
@@ -49,9 +49,10 @@ const Achievements = () => {
     {
       title: 'RIFT \'26 Hackathon',
       org: 'PW (PhysicsWallah)',
-      result: 'Certificate Participant',
-      description: 'Hackathon organized by PhysicsWallah.',
+      result: 'Semifinalist',
+      description: 'Semifinalist in the RIFT \'26 Hackathon organized by PhysicsWallah. Credential ID: 99d629c0-658e-4d1f-a2e3-166541c78c3c',
       date: 'Feb 2026',
+      highlight: true,
     },
   ];
 
