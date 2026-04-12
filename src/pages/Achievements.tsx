@@ -1,4 +1,4 @@
-import { Trophy, Award, GraduationCap, Shield, Code2, Brain, Cpu, Cloud, FileText } from 'lucide-react';
+import { Trophy, Award, GraduationCap, Shield, Code2, Brain, Cpu, Cloud, FileText, ExternalLink } from 'lucide-react';
 
 const Achievements = () => {
   const hackathons = [
@@ -214,6 +214,12 @@ const Achievements = () => {
                       </span>
                     ))}
                   </div>
+                  {cert.link && (
+                    <a href={cert.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-primary hover:text-primary/80 transition-colors mt-1">
+                      <ExternalLink className="w-3 h-3" />
+                      View Credential
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
