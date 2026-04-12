@@ -9,6 +9,7 @@ type Project = {
   github: string;
   category: string;
   highlight?: string;
+  demo?: string;
 };
 
 const Projects = () => {
@@ -23,7 +24,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/Driver_Drowsiness_Alerting_System',
       category: 'Computer Vision',
       highlight: '98.7% Accuracy',
-    },
+      demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_driver-drowsiness-detection-using-cnn-ugcPost-7357011125185454082-OEYC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
     {
       title: 'KCET Rank Predictor & College Recommender',
       description: 'End-to-end ML system with FastAPI REST APIs and Streamlit UI. Dockerized deployment with ML inference and college recommendation engine.',
@@ -31,7 +32,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/kcet-rank-college-advisor-platform',
       category: 'Full Stack ML',
       highlight: 'Dockerized',
-    },
+      demo: 'https://kcet-rank-prediction-college-tolm.onrender.com/',
     {
       title: 'TACOS — Toxic Comment Moderation',
       description: 'Real-time AI moderation system using fine-tuned DistilBERT on 2M+ toxic comments. Multi-label classification with FastAPI & Docker Compose.',
@@ -47,7 +48,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/HandSignTranslator-CNN',
       category: 'Computer Vision',
       highlight: '94%+ Accuracy',
-    },
+      demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_aiforgood-deeplearning-computervision-ugcPost-7354503710384791574-dv_S?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
     // Reinforcement Learning
     {
       title: 'OpenEnv Reinforcement Learning',
@@ -85,7 +86,7 @@ const Projects = () => {
       techStack: ['Python', 'Streamlit', 'AI', 'Data Visualization'],
       github: 'https://github.com/Venkat-023/AI-Based-Query-Support-System',
       category: 'Full Stack ML',
-    },
+      demo: 'https://ai-based-query-support-system-1.onrender.com/',
     {
       title: 'Email Content Classifier',
       description: 'Machine learning system for automatic email content classification and categorization.',
@@ -329,14 +330,22 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* GitHub Button */}
-              <div className="pt-4 mt-4 border-t border-border/30">
-                <Button asChild size="sm" className="w-full bg-primary hover:bg-primary/90">
+              {/* Action Buttons */}
+              <div className="pt-4 mt-4 border-t border-border/30 flex gap-2">
+                <Button asChild size="sm" className="flex-1 bg-primary hover:bg-primary/90">
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2" size={16} />
-                    View on GitHub
+                    GitHub
                   </a>
                 </Button>
+                {project.demo && (
+                  <Button asChild size="sm" variant="outline" className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2" size={16} />
+                      Demo
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           ))}
