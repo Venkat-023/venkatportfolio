@@ -8,7 +8,7 @@ const Home = () => {
   const [githubCount, setGithubCount] = useState(0);
 
   useEffect(() => {
-    const leetcodeTarget = 800;
+    const leetcodeTarget = 870;
     const githubTarget = 30;
     const duration = 2000;
     const steps = 60;
@@ -123,7 +123,7 @@ const Home = () => {
                 <Trophy className="text-accent w-8 h-8" />
                 <div className="text-left">
                   <p className="text-sm text-muted-foreground">Amazon ML Hackathon 2025</p>
-                  <p className="font-bold text-lg text-accent">Rank #1693 / 82,790</p>
+                   <p className="font-bold text-lg text-accent">Rank #1693 / 82,790</p>
                 </div>
               </div>
             </div>
@@ -132,7 +132,7 @@ const Home = () => {
                 <Award className="text-primary w-8 h-8" />
                 <div className="text-left">
                   <p className="text-sm text-muted-foreground">CodeWar — IIT Ropar (CodeChef)</p>
-                  <p className="font-bold text-lg text-primary">Rank #4367 / 32,000+</p>
+                  <p className="font-bold text-lg text-primary">Rank #3593 / 32,000+</p>
                 </div>
               </div>
             </div>
