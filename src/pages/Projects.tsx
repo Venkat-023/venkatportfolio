@@ -9,6 +9,7 @@ type Project = {
   github: string;
   category: string;
   highlight?: string;
+  demo?: string;
 };
 
 const Projects = () => {
@@ -329,14 +330,22 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* GitHub Button */}
-              <div className="pt-4 mt-4 border-t border-border/30">
-                <Button asChild size="sm" className="w-full bg-primary hover:bg-primary/90">
+              {/* Action Buttons */}
+              <div className="pt-4 mt-4 border-t border-border/30 flex gap-2">
+                <Button asChild size="sm" className="flex-1 bg-primary hover:bg-primary/90">
                   <a href={project.github} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2" size={16} />
-                    View on GitHub
+                    GitHub
                   </a>
                 </Button>
+                {project.demo && (
+                  <Button asChild size="sm" variant="outline" className="flex-1 border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2" size={16} />
+                      Demo
+                    </a>
+                  </Button>
+                )}
               </div>
             </div>
           ))}
