@@ -24,6 +24,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/Driver_Drowsiness_Alerting_System',
       category: 'Computer Vision',
       highlight: '98.7% Accuracy',
+      demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_driver-drowsiness-detection-using-cnn-ugcPost-7357011125185454082-OEYC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
     },
     {
       title: 'KCET Rank Predictor & College Recommender',
@@ -32,6 +33,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/kcet-rank-college-advisor-platform',
       category: 'Full Stack ML',
       highlight: 'Dockerized',
+      demo: 'https://kcet-rank-prediction-college-tolm.onrender.com/',
     },
     {
       title: 'TACOS — Toxic Comment Moderation',
@@ -48,6 +50,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/HandSignTranslator-CNN',
       category: 'Computer Vision',
       highlight: '94%+ Accuracy',
+      demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_aiforgood-deeplearning-computervision-ugcPost-7354503710384791574-dv_S?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEuTA3YBtKXkRvQ4qp0EdqsKhy16Bz2w33k',
     },
     // Reinforcement Learning
     {
@@ -86,6 +89,7 @@ const Projects = () => {
       techStack: ['Python', 'Streamlit', 'AI', 'Data Visualization'],
       github: 'https://github.com/Venkat-023/AI-Based-Query-Support-System',
       category: 'Full Stack ML',
+      demo: 'https://ai-based-query-support-system-1.onrender.com/',
     },
     {
       title: 'Email Content Classifier',
