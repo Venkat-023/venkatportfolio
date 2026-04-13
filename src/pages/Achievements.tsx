@@ -11,17 +11,6 @@ const Achievements = () => {
       highlight: true,
       link: 'https://www.linkedin.com/feed/update/urn:li:activity:7432691845194801152/',
     },
-  ];
-
-  const hackathons = [
-    {
-      title: 'Amazon ML Hackathon 2025',
-      org: 'Amazon',
-      result: 'Rank #1693 / 82,790',
-      description: 'Product Price Prediction using ensemble ML methods. Final SMAPE Score: 51.4',
-      date: 'Jan 2026',
-      highlight: true,
-    },
     {
       title: 'IndiAIgnite: Prototyping AI Solutions for Atmanirbhar Bharat',
       org: 'RV Institute of Technology and Management, Bengaluru (Startup Ignition Cell & E-Cell in collaboration with CEDAT NEXUS)',
@@ -31,8 +20,13 @@ const Achievements = () => {
       highlight: true,
       link: 'https://github.com/Venkat-023/TACOS-ToxicityAnalysis-Comment-Observation-System',
     },
+  ];
+
+  const hackathons = [
     {
-      title: 'Artpark CodeForge Hackathon',
+      title: 'Amazon ML Hackathon 2025',
+      org: 'Amazon',
+      result: 'Rank #1693 / 82,790',
       org: 'Indian Institute of Science (IISc)',
       result: 'Participant',
       description: 'Built CareerDNA — AI-Adaptive Onboarding Engine that parses resumes, identifies skill gaps, and generates personalized training pathways.',
