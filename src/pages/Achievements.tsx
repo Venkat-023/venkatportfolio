@@ -27,6 +27,12 @@ const Achievements = () => {
       title: 'Amazon ML Hackathon 2025',
       org: 'Amazon',
       result: 'Rank #1693 / 82,790',
+      description: 'Product Price Prediction using ensemble ML methods. Final SMAPE Score: 51.4',
+      date: 'Jan 2026',
+      highlight: true,
+    },
+    {
+      title: 'Artpark CodeForge Hackathon',
       org: 'Indian Institute of Science (IISc)',
       result: 'Participant',
       description: 'Built CareerDNA — AI-Adaptive Onboarding Engine that parses resumes, identifies skill gaps, and generates personalized training pathways.',
