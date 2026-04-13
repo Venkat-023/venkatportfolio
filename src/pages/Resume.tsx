@@ -31,7 +31,7 @@ const Resume = () => {
             <a href="https://leetcode.com/u/Venkat_Baba/" target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 glass-card px-6 py-3 rounded-lg hover:border-accent hover:glow-orange transition-all">
               <Code2 className="text-accent" size={24} />
-              <span className="font-semibold">LeetCode - 800+ Solved</span>
+              <span className="font-semibold">LeetCode - 870+ Solved</span>
             </a>
             <a href="https://www.linkedin.com/in/venkat-baba-yemineni-49a7612b4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B6bems%2BcLQtmzBT1UYU7wWQ%3D%3D"
               target="_blank" rel="noopener noreferrer"
@@ -83,7 +83,7 @@ const Resume = () => {
             </div>
             <div>
               <h3 className="text-lg font-semibold text-primary mb-3">Data Structures & Algorithms</h3>
-              <p className="text-muted-foreground">Strong foundation with hands-on experience; solved over 800+ problems on LeetCode</p>
+              <p className="text-muted-foreground">Strong foundation with hands-on experience; solved over 870+ problems on LeetCode</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-primary mb-3">Development</h3>
@@ -138,11 +138,19 @@ const Resume = () => {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>
-              <span>Ranked #4367 / 32,000+ in CodeWar (IIT Ropar) — National-level CodeChef contest</span>
+              <span>Ranked #3593 / 32,000+ in CodeWar (IIT Ropar) — National-level CodeChef contest</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>
-              <span>800+ LeetCode challenges solved and 30+ end-to-end AI/ML projects on GitHub</span>
+              <span>870+ LeetCode challenges solved and 30+ end-to-end AI/ML projects on GitHub</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-2xl">•</span>
+              <span>Semifinalist in RIFT '26 Hackathon organized by PhysicsWallah</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-2xl">•</span>
+              <span>Presented research paper on GAN-based age-invariant face recognition at ICDTE-2025 (International Conference)</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>

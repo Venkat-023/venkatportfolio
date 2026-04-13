@@ -136,6 +136,15 @@ const Home = () => {
                 </div>
               </div>
             </div>
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7432691845194801152/" target="_blank" rel="noopener noreferrer" className="glass-card p-6 rounded-xl animate-glow hover:border-accent/50 transition-all cursor-pointer">
+              <div className="flex items-center gap-3">
+                <Trophy className="text-accent w-8 h-8" />
+                <div className="text-left">
+                  <p className="text-sm text-muted-foreground">RIFT '26 Hackathon (PhysicsWallah)</p>
+                  <p className="font-bold text-lg text-accent">Semifinalist</p>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </section>
