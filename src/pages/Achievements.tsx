@@ -1,6 +1,18 @@
 import { Trophy, Award, GraduationCap, Shield, Code2, Brain, Cpu, Cloud, FileText, ExternalLink } from 'lucide-react';
 
 const Achievements = () => {
+  const conferences = [
+    {
+      title: 'ICDTE-2025 — International Conference on Digital Technology and Engineering',
+      org: 'RV Institute of Technology and Management, Bengaluru',
+      result: 'Paper Presenter & Certificate of Appreciation',
+      description: 'Presented a research paper on GAN-based age-invariant face recognition. The work focuses on how GANs can generate age-progressed and age-regressed facial images to support identity verification and forensic applications.',
+      date: '2025',
+      highlight: true,
+      link: 'https://www.linkedin.com/feed/update/urn:li:activity:7432691845194801152/',
+    },
+  ];
+
   const hackathons = [
     {
       title: 'Amazon ML Hackathon 2025',
@@ -137,6 +149,46 @@ const Achievements = () => {
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Competitions, hackathons, and professional certifications
           </p>
+        </div>
+
+        {/* Conferences */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-display font-bold mb-8 text-gradient-cyan flex items-center gap-3">
+            <Award className="w-8 h-8 text-primary" />
+            Conferences & Presentations
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {conferences.map((conf, index) => (
+              <div
+                key={index}
+                className="glass-card p-6 rounded-2xl hover-lift transition-all animate-fade-in border-2 border-primary/50"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-primary/20 flex-shrink-0">
+                    <Award className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="text-lg font-display font-bold text-foreground">{conf.title}</h3>
+                      <span className="text-xs text-muted-foreground whitespace-nowrap">{conf.date}</span>
+                    </div>
+                    <p className="text-sm text-primary font-medium mt-1">{conf.org}</p>
+                    <span className="inline-block mt-2 px-3 py-1 rounded-full text-xs font-bold bg-primary/20 text-primary border border-primary/30">
+                      {conf.result}
+                    </span>
+                    <p className="text-sm text-muted-foreground mt-2">{conf.description}</p>
+                    {conf.link && (
+                      <a href={conf.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
+                        <ExternalLink className="w-4 h-4" />
+                        View Post
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Hackathons */}

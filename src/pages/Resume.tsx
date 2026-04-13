@@ -138,11 +138,11 @@ const Resume = () => {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>
-              <span>Ranked #4367 / 32,000+ in CodeWar (IIT Ropar) — National-level CodeChef contest</span>
+              <span>Ranked #3593 / 32,000+ in CodeWar (IIT Ropar) — National-level CodeChef contest</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>
-              <span>800+ LeetCode challenges solved and 30+ end-to-end AI/ML projects on GitHub</span>
+              <span>870+ LeetCode challenges solved and 30+ end-to-end AI/ML projects on GitHub</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>
