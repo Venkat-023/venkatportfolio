@@ -235,8 +235,8 @@ const Achievements = () => {
                       </span>
                     )}
                     <p className="text-sm text-muted-foreground mt-2">{hack.description}</p>
-                    {'link' in hack && hack.link && (
-                      <a href={hack.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
+                    {'link' in hack && (hack as any).link && (
+                      <a href={(hack as any).link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
                         <ExternalLink className="w-4 h-4" />
                         View Project
                       </a>
