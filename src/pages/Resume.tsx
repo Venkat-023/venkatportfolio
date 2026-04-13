@@ -156,6 +156,10 @@ const Resume = () => {
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>
+              <span>Presented TACOS — Real-Time Toxic Comment Moderation System at IndiAIgnite (RVITM, Feb 2026)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-2xl">•</span>
               <span>Developed intelligent systems across Medical, Cybersecurity, Automobile, Educational, Robotics, Agriculture, and Sales domains</span>
             </li>
           </ul>
