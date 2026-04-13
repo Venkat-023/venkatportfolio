@@ -41,10 +41,12 @@ const Resume = () => {
             </a>
           </div>
 
-          <Button size="lg" className="mt-6 bg-primary hover:bg-primary/90 glow-cyan">
-            <Download className="mr-2" size={20} />
-            Download PDF Resume
-          </Button>
+          <a href="/resume.pdf" download="Venkat_Baba_Yemineni_Resume.pdf">
+            <Button size="lg" className="mt-6 bg-primary hover:bg-primary/90 glow-cyan">
+              <Download className="mr-2" size={20} />
+              Download PDF Resume
+            </Button>
+          </a>
         </div>
 
         {/* Education */}
