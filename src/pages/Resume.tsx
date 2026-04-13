@@ -41,10 +41,12 @@ const Resume = () => {
             </a>
           </div>
 
-          <Button size="lg" className="mt-6 bg-primary hover:bg-primary/90 glow-cyan">
-            <Download className="mr-2" size={20} />
-            Download PDF Resume
-          </Button>
+          <a href="/resume.pdf" download="Venkat_Baba_Yemineni_Resume.pdf">
+            <Button size="lg" className="mt-6 bg-primary hover:bg-primary/90 glow-cyan">
+              <Download className="mr-2" size={20} />
+              Download PDF Resume
+            </Button>
+          </a>
         </div>
 
         {/* Education */}
@@ -151,6 +153,10 @@ const Resume = () => {
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>
               <span>Presented research paper on GAN-based age-invariant face recognition at ICDTE-2025 (International Conference)</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-accent text-2xl">•</span>
+              <span>Presented TACOS — Real-Time Toxic Comment Moderation System at IndiAIgnite (RVITM, Feb 2026)</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="text-accent text-2xl">•</span>

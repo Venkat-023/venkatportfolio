@@ -23,6 +23,15 @@ const Achievements = () => {
       highlight: true,
     },
     {
+      title: 'IndiAIgnite: Prototyping AI Solutions for Atmanirbhar Bharat',
+      org: 'RV Institute of Technology and Management, Bengaluru (Startup Ignition Cell & E-Cell in collaboration with CEDAT NEXUS)',
+      result: 'Certificate of Participation — Presented TACOS System',
+      description: 'Demonstrated excellence in innovation, presentation, and technical execution. Presented TACOS — a real-time toxic comment moderation system using DistilBERT transformer models for multi-label toxicity detection.',
+      date: 'Feb 2026',
+      highlight: true,
+      link: 'https://github.com/Venkat-023/TACOS-ToxicityAnalysis-Comment-Observation-System',
+    },
+    {
       title: 'Artpark CodeForge Hackathon',
       org: 'Indian Institute of Science (IISc)',
       result: 'Participant',
@@ -226,6 +235,12 @@ const Achievements = () => {
                       </span>
                     )}
                     <p className="text-sm text-muted-foreground mt-2">{hack.description}</p>
+                    {hack.link && (
+                      <a href={hack.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-primary hover:text-primary/80 transition-colors mt-3">
+                        <ExternalLink className="w-4 h-4" />
+                        View Project
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
