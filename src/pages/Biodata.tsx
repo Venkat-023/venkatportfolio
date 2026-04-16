@@ -49,7 +49,7 @@ const Biodata = () => {
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">LeetCode</td>
-                <td className="py-4 text-foreground">800+ Problems Solved</td>
+                <td className="py-4 text-foreground">870+ Problems Solved</td>
               </tr>
               <tr className="border-b border-border/50">
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">GitHub</td>
