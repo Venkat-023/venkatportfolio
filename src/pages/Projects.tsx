@@ -42,6 +42,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/TACOS-ToxicityAnalysis-Comment-Observation-System',
       category: 'NLP',
       highlight: 'Micro-F1: 0.75',
+      demo: 'https://huggingface.co/spaces/Venkat-023/TACOS',
     },
     {
       title: 'SignSpeak Real-Time ASL Recognition',
@@ -59,6 +60,7 @@ const Projects = () => {
       techStack: ['Python', 'Reinforcement Learning', 'OpenAI Gym'],
       github: 'https://github.com/Venkat-023/OpenEnv-ReinforcementLearning',
       category: 'Reinforcement Learning',
+      demo: 'https://huggingface.co/spaces/Venkat-023/Ai_First_Minute',
     },
     // Deep Learning & Time Series
     {
@@ -159,6 +161,7 @@ const Projects = () => {
       techStack: ['XGBoost', 'FastAPI', 'scikit-learn', 'Pandas'],
       github: 'https://github.com/Venkat-023/Power-Consumption-Regressor',
       category: 'Full Stack ML',
+      demo: 'https://huggingface.co/spaces/Venkat-023/Power-Consumption-Regressor',
     },
     {
       title: 'Amazon ML Hackathon 2025',
@@ -244,7 +247,8 @@ const Projects = () => {
 
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
 
-  const filteredProjects = activeFilter === 'All' ? projects : projects.filter(p => p.category === activeFilter);
+  const baseFiltered = activeFilter === 'All' ? projects : projects.filter(p => p.category === activeFilter);
+  const filteredProjects = [...baseFiltered].sort((a, b) => Number(!!b.demo) - Number(!!a.demo));
 
   const getCategoryIcon = (category: string) => {
     const icons: Record<string, React.ReactNode> = {

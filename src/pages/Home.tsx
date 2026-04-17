@@ -31,6 +31,7 @@ const Home = () => {
       results: { 'Micro-F1': '0.75', 'Dataset': '2M+ comments', 'Pipeline': 'Data → DistilBERT → FastAPI → Docker' },
       stack: ['DistilBERT', 'TensorFlow', 'FastAPI', 'Docker Compose', 'Streamlit'],
       github: 'https://github.com/Venkat-023/TACOS-ToxicityAnalysis-Comment-Observation-System',
+      demo: 'https://huggingface.co/spaces/Venkat-023/TACOS',
       color: 'primary',
     },
     {

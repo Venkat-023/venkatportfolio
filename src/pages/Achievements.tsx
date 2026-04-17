@@ -51,7 +51,7 @@ const Achievements = () => {
       org: 'Amazon Web Services (AWS)',
       result: 'Participant',
       description: 'AWS Summit focused on cloud computing technologies and services.',
-      date: 'Jan 2026',
+      date: 'Mar 2025',
     },
     {
       title: 'Kharagpur Data Science Hackathon',
