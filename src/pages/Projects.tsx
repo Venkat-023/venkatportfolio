@@ -247,7 +247,8 @@ const Projects = () => {
 
   const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
 
-  const filteredProjects = activeFilter === 'All' ? projects : projects.filter(p => p.category === activeFilter);
+  const baseFiltered = activeFilter === 'All' ? projects : projects.filter(p => p.category === activeFilter);
+  const filteredProjects = [...baseFiltered].sort((a, b) => Number(!!b.demo) - Number(!!a.demo));
 
   const getCategoryIcon = (category: string) => {
     const icons: Record<string, React.ReactNode> = {
