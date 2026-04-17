@@ -59,7 +59,7 @@ const Biodata = () => {
                 <td className="py-4 pr-8 font-semibold text-primary whitespace-nowrap">Key Achievements</td>
                 <td className="py-4 text-foreground">
                   Amazon ML Hackathon 2025 — Rank #1693 / 82,790<br />
-                  CodeWar IIT Ropar — Rank #4367 / 32,000+
+                  CodeWar IIT Ropar — Rank #3593 / 32,000+
                 </td>
               </tr>
               <tr className="border-b border-border/50">
