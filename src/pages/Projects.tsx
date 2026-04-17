@@ -161,6 +161,7 @@ const Projects = () => {
       techStack: ['XGBoost', 'FastAPI', 'scikit-learn', 'Pandas'],
       github: 'https://github.com/Venkat-023/Power-Consumption-Regressor',
       category: 'Full Stack ML',
+      demo: 'https://huggingface.co/spaces/Venkat-023/Power-Consumption-Regressor',
     },
     {
       title: 'Amazon ML Hackathon 2025',
