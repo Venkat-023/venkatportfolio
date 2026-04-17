@@ -42,6 +42,7 @@ const Projects = () => {
       github: 'https://github.com/Venkat-023/TACOS-ToxicityAnalysis-Comment-Observation-System',
       category: 'NLP',
       highlight: 'Micro-F1: 0.75',
+      demo: 'https://huggingface.co/spaces/Venkat-023/TACOS',
     },
     {
       title: 'SignSpeak Real-Time ASL Recognition',
@@ -59,6 +60,7 @@ const Projects = () => {
       techStack: ['Python', 'Reinforcement Learning', 'OpenAI Gym'],
       github: 'https://github.com/Venkat-023/OpenEnv-ReinforcementLearning',
       category: 'Reinforcement Learning',
+      demo: 'https://huggingface.co/spaces/Venkat-023/Ai_First_Minute',
     },
     // Deep Learning & Time Series
     {
