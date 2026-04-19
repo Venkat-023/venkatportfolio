@@ -72,7 +72,7 @@ const Home = () => {
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.08] text-foreground mb-6">
             AI Systems Engineer{' '}
-            <span className="text-gradient-cyan block mt-2">building production ML pipelines</span>
+            <span className="text-gradient-cyan block mt-2">building AI/Backend/ML pipelines</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
@@ -298,7 +298,7 @@ const Home = () => {
             <div className="glass-card p-6 rounded-2xl border-2 border-primary/40">
               <h3 className="text-sm font-bold uppercase tracking-wider text-primary mb-4">Core</h3>
               <div className="space-y-3">
-                {['Python', 'Machine Learning (scikit-learn, XGBoost)', 'Deep Learning (TensorFlow, Keras)', 'FastAPI & REST APIs', 'Docker & Containerization', 'Computer Vision (OpenCV, MediaPipe)'].map(s => (
+                {['Python', 'Machine Learning', 'Deep Learning (TensorFlow, Keras)', 'FastAPI & REST APIs', 'Docker & Containerization', 'Computer Vision (OpenCV, MediaPipe)'].map(s => (
                   <div key={s} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                     <span className="text-sm text-foreground">{s}</span>
