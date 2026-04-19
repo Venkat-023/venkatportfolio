@@ -72,7 +72,7 @@ const Home = () => {
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.08] text-foreground mb-6">
             AI Systems Engineer{' '}
-            <span className="text-gradient-cyan block mt-2">building AI/Backend/ML pipelines</span>
+            <span className="text-gradient-cyan block mt-2">building AI/ML pipelines</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
