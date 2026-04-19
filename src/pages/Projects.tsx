@@ -83,6 +83,7 @@ const Projects = () => {
       description: 'AI-driven adaptive learning engine that parses resumes and job descriptions, identifies skill gaps, and generates personalized learning paths.',
       techStack: ['Python', 'NLP', 'Resume Parsing', 'AI'],
       github: 'https://github.com/Venkat-023/CareerDNA',
+      demo: 'https://huggingface.co/spaces/Venkat-023/CareerDNA',
       category: 'NLP',
     },
     {
@@ -120,6 +121,7 @@ const Projects = () => {
       description: 'Plant disease detection and health monitoring system using UGNet for precise leaf and disease segmentation.',
       techStack: ['UGNet', 'Deep Learning', 'Computer Vision', 'Segmentation'],
       github: 'https://github.com/Venkat-023/GreenGaurd-Ai',
+      demo: 'https://huggingface.co/spaces/Venkat-023/GreenGuard-Ai',
       category: 'Computer Vision',
     },
     {
