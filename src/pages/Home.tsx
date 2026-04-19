@@ -67,7 +67,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Open to ML / Backend internships & roles
+            Open to AI / Backend internships & roles
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.08] text-foreground mb-6">
