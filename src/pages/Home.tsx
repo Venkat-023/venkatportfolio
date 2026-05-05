@@ -310,7 +310,7 @@ const Home = () => {
             <div className="glass-card p-6 rounded-2xl border border-border/50">
               <h3 className="text-sm font-bold uppercase tracking-wider text-secondary mb-4">Intermediate</h3>
               <div className="space-y-3">
-                {['AWS (EC2, S3, Lambda)', 'NLP & Transformers (DistilBERT)', 'CI/CD Pipelines', 'Streamlit & Deployment', 'Pandas, NumPy, Matplotlib'].map(s => (
+                {['AWS (EC2, S3, Lambda)', 'NLP & Transformers', 'CI/CD Pipelines', 'Pandas, NumPy, Matplotlib'].map(s => (
                   <div key={s} className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
                     <span className="text-sm text-foreground">{s}</span>
