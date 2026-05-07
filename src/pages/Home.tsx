@@ -58,6 +58,17 @@ const Home = () => {
       demo: 'https://www.linkedin.com/posts/venkat-baba-yemineni-49a7612b4_driver-drowsiness-detection-using-cnn-ugcPost-7357011125185454082-OEYC',
       color: 'secondary',
     },
+    {
+      title: 'Longitudinal Disease Progression — RAG + Agentic AI',
+      problem: 'Cardiac patients lack tools to understand how their condition evolves across ICU visits. Clinicians need early warnings of worsening trajectories from longitudinal EHR data.',
+      system: 'Built patient visit sequences from MIMIC-IV (59 features × 6 timesteps) → Trained BiLSTM Attention, BiGRU, and Transformer Encoder models for binary classification (worsening vs stable). Building a RAG + Agentic AI web platform where users upload medical reports, track health trajectories, and receive AI-driven recommendations.',
+      decisions: 'Compared three architectures: Transformer Encoder won on AUC-ROC (0.91) and F1 (0.61), BiGRU achieved highest recall (0.84). Used weighted loss to handle 16.9% positive class imbalance. Chose encoder-only Transformer over decoder — classification task, not generation.',
+      challenges: 'Severe class imbalance (16.9% worsening). Threshold tuning critical — default 0.5 favors recall; 0.7 balances precision-recall. Feature engineering across 59 clinical variables including vitals, cardiac markers, labs, and temporal context.',
+      results: { 'Best AUC-ROC': '0.9096', 'Best Recall': '0.84 (BiGRU)', 'Dataset': '35K+ MIMIC-IV sequences' },
+      stack: ['BiLSTM', 'Transformer', 'BiGRU', 'PyTorch', 'MIMIC-IV', 'RAG', 'Agentic AI'],
+      github: 'https://github.com/Venkat-023/Longitudinal-Temporal-Disease-Progression',
+      color: 'primary',
+    },
   ];
 
   return (

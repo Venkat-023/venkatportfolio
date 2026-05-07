@@ -72,10 +72,11 @@ const Projects = () => {
     },
     {
       title: 'Longitudinal Disease Progression',
-      description: 'Deep learning pipeline predicting cardiac condition progression across ICU admissions using temporal patient data.',
-      techStack: ['Python', 'Deep Learning', 'Medical AI', 'Time Series'],
+      description: 'Longitudinal deep-learning pipeline predicting cardiac condition progression from MIMIC-IV ICU data. Compared BiLSTM Attention, BiGRU & Transformer Encoder on 35K+ patient sequences (AUC-ROC 0.91). Building RAG + Agentic AI layer where users upload medical reports, track health trajectories, and get AI-driven recommendations.',
+      techStack: ['BiLSTM', 'Transformer', 'BiGRU', 'MIMIC-IV', 'RAG', 'Agentic AI', 'PyTorch'],
       github: 'https://github.com/Venkat-023/Longitudinal-Temporal-Disease-Progression',
       category: 'Medical AI',
+      highlight: 'AUC-ROC 0.91',
     },
     // NLP & AI Tools
     {
