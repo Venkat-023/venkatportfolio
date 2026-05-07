@@ -68,6 +68,17 @@ const Home = () => {
       stack: ['RAG', 'Agentic AI', 'BiLSTM', 'Transformer', 'BiGRU', 'PyTorch', 'MIMIC-IV'],
       github: 'https://github.com/Venkat-023/Longitudinal-Temporal-Disease-Progression',
       color: 'primary',
+      pipeline: [
+        { step: '1', label: 'Report Parsing', desc: 'Upload & parse diverse medical reports into structured patient data' },
+        { step: '2', label: 'Trajectory Building', desc: '59 features × 6 timesteps sequences from longitudinal ICU visits' },
+        { step: '3', label: 'Progression Prediction', desc: 'BiLSTM, BiGRU & Transformer classify worsening vs stable' },
+        { step: '4', label: 'RAG + Agentic AI', desc: 'Retrieval-grounded recommendations to help reduce progression' },
+      ],
+      modelMetrics: [
+        { model: 'BiLSTM Attention', accuracy: '0.8134', precision: '0.4712', recall: '0.8304', f1: '0.6012', auc: '0.9021' },
+        { model: 'BiGRU', accuracy: '0.8132', precision: '0.4712', recall: '0.8404', f1: '0.6038', auc: '0.9076' },
+        { model: 'Transformer Encoder', accuracy: '0.8198', precision: '0.4814', recall: '0.8237', f1: '0.6077', auc: '0.9096' },
+      ],
     },
   ];
 
@@ -189,6 +200,56 @@ const Home = () => {
                       </div>
                     ))}
                   </div>
+
+                  {/* Pipeline Steps */}
+                  {'pipeline' in project && (project as any).pipeline && (
+                    <div className="pt-4 border-t border-border/30 space-y-3">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-primary mb-3">Pipeline Architecture</h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                        {(project as any).pipeline.map((p: any, idx: number) => (
+                          <div key={idx} className="relative text-center px-3 py-4 rounded-xl bg-muted/30 border border-border/50">
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs font-bold mb-2">{p.step}</span>
+                            <p className="text-sm font-display font-bold text-foreground">{p.label}</p>
+                            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">{p.desc}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Model Metrics Table */}
+                  {'modelMetrics' in project && (project as any).modelMetrics && (
+                    <div className="pt-4 border-t border-border/30 space-y-3">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-accent mb-3">Model Performance — MIMIC-IV Test Set (5,289 samples)</h4>
+                      <div className="overflow-x-auto rounded-xl border border-border/50">
+                        <table className="w-full text-sm">
+                          <thead>
+                            <tr className="bg-muted/30">
+                              <th className="text-left px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Model</th>
+                              <th className="text-center px-3 py-2.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Accuracy</th>
+                              <th className="text-center px-3 py-2.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Precision</th>
+                              <th className="text-center px-3 py-2.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Recall</th>
+                              <th className="text-center px-3 py-2.5 text-xs font-bold uppercase tracking-wider text-muted-foreground">F1</th>
+                              <th className="text-center px-3 py-2.5 text-xs font-bold uppercase tracking-wider text-primary">AUC-ROC</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {(project as any).modelMetrics.map((m: any, idx: number) => (
+                              <tr key={idx} className="border-t border-border/30 hover:bg-primary/5 transition-colors">
+                                <td className="px-4 py-2.5 font-display font-bold text-foreground">{m.model}</td>
+                                <td className="text-center px-3 py-2.5 text-muted-foreground">{m.accuracy}</td>
+                                <td className="text-center px-3 py-2.5 text-muted-foreground">{m.precision}</td>
+                                <td className="text-center px-3 py-2.5 text-muted-foreground">{m.recall}</td>
+                                <td className="text-center px-3 py-2.5 text-muted-foreground">{m.f1}</td>
+                                <td className="text-center px-3 py-2.5 font-bold text-primary">{m.auc}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                      <p className="text-xs text-muted-foreground italic">Best AUC-ROC & F1: Transformer Encoder · Best Recall: BiGRU (catches most worsening cases)</p>
+                    </div>
+                  )}
 
                   <div className="flex flex-wrap gap-1.5">
                     {project.stack.map((tech) => (
