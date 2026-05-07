@@ -251,6 +251,7 @@ const Home = () => {
                     </div>
                   )}
 
+                  <div className="flex flex-wrap gap-1.5">
                     {project.stack.map((tech) => (
                       <span key={tech} className="px-2.5 py-0.5 text-xs font-medium bg-primary/5 text-primary border border-primary/10 rounded-full">
                         {tech}
