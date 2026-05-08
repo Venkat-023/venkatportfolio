@@ -12,6 +12,18 @@ const Publications = () => {
       techStack: ['XGBoost', 'LightGBM', 'FastAPI', 'Streamlit', 'Optuna', 'scikit-learn'],
       link: 'http://hbrppublication.com/OJS/index.php/JACNS/article/view/9490',
     },
+    {
+      title:
+        'Stock Price Prediction using Deep Learning Models: A Comparative Study of LSTM, GRU, Bi-LSTM, and Hybrid Architectures',
+      date: 'May 2026',
+      authors:
+        'Sayeed Baig, Venkat Baba Yemineni, Vinayak Arun Naik, Sameeksha Uday Naik, Shine Malik, Dr. Savitha G',
+      venue: 'International Research Journal of Engineering and Technology (IRJET), Volume 13, Issue 05, S.No: 57',
+      abstract:
+        'A comparative study of deep learning architectures for stock price prediction, evaluating LSTM, GRU, Bi-LSTM, and hybrid models on historical market data. The work benchmarks each architecture on forecasting accuracy and stability, analyzing how sequence modeling choices and hybridization influence predictive performance for financial time-series.',
+      techStack: ['LSTM', 'GRU', 'Bi-LSTM', 'Hybrid Models', 'TensorFlow', 'Keras', 'Python'],
+      link: 'https://www.irjet.net/archives/V13/i5/IRJET-V13I0557.pdf',
+    },
   ];
 
   return (
@@ -47,6 +59,13 @@ const Publications = () => {
                     </div>
                   </div>
                 </div>
+
+                {pub.authors && (
+                  <p className="text-sm text-foreground/80"><span className="text-muted-foreground">Authors: </span>{pub.authors}</p>
+                )}
+                {pub.venue && (
+                  <p className="text-sm text-primary/90 font-medium">{pub.venue}</p>
+                )}
 
                 <p className="text-muted-foreground leading-relaxed">{pub.abstract}</p>
 
