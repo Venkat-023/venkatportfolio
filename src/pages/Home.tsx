@@ -181,11 +181,11 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 pt-4 border-t border-border/30">
+                  <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4 border-t border-border/30 text-sm">
                     {Object.entries(project.results).map(([key, val]) => (
-                      <div key={key} className="text-center px-4 py-3 rounded-xl bg-primary/5 border border-primary/20">
-                        <span className="block text-lg md:text-xl font-display font-bold text-primary">{val}</span>
-                        <span className="text-xs text-muted-foreground uppercase tracking-wider">{key}</span>
+                      <div key={key} className="flex items-baseline gap-2">
+                        <span className="text-xs uppercase tracking-wider text-muted-foreground">{key}:</span>
+                        <span className="font-display font-bold text-primary">{val}</span>
                       </div>
                     ))}
                   </div>
