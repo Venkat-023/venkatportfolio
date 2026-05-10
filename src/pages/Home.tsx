@@ -258,7 +258,7 @@ const Home = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </Tilt3D>
             ))}
           </div>
 
