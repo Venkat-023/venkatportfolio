@@ -3,6 +3,7 @@ import { Github, Code2, Linkedin, FileText, Briefcase, Trophy, Award, ArrowRight
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import HeroScene from '@/components/three/HeroScene';
+import Tilt3D from '@/components/three/Tilt3D';
 
 const Home = () => {
   const [leetcodeCount, setLeetcodeCount] = useState(0);
@@ -124,11 +125,13 @@ const Home = () => {
               { label: 'Amazon ML Hack', value: '#1693', sub: 'of 82,790 (top ~2%)' },
               { label: 'CodeWar IIT Ropar', value: '#3593', sub: 'of 32,000+ participants' },
             ].map((stat) => (
-              <div key={stat.label} className="glass-card p-5 rounded-xl border border-border/50">
-                <p className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.value}</p>
-                <p className="text-sm font-medium text-foreground mt-1">{stat.label}</p>
-                <p className="text-xs text-muted-foreground mt-0.5">{stat.sub}</p>
-              </div>
+              <Tilt3D key={stat.label} max={12} scale={1.04}>
+                <div className="glass-card p-5 rounded-xl border border-border/50">
+                  <p className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.value}</p>
+                  <p className="text-sm font-medium text-foreground mt-1">{stat.label}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{stat.sub}</p>
+                </div>
+              </Tilt3D>
             ))}
           </div>
         </div>
@@ -147,7 +150,8 @@ const Home = () => {
 
           <div className="space-y-8">
             {featuredProjects.map((project, i) => (
-              <div key={i} className="glass-card rounded-2xl border border-border/50 overflow-hidden">
+              <Tilt3D key={i} max={5} scale={1.01}>
+                <div className="glass-card rounded-2xl border border-border/50 overflow-hidden">
                 <div className={`h-1 bg-${project.color}`} />
                 <div className="p-6 md:p-8 space-y-6">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
@@ -254,7 +258,8 @@ const Home = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+                </div>
+              </Tilt3D>
             ))}
           </div>
 
