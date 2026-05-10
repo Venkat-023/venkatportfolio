@@ -132,6 +132,7 @@ const Home = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* ===== FEATURED PROJECTS (CASE STUDIES) ===== */}
