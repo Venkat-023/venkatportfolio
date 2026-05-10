@@ -150,7 +150,8 @@ const Home = () => {
 
           <div className="space-y-8">
             {featuredProjects.map((project, i) => (
-              <div key={i} className="glass-card rounded-2xl border border-border/50 overflow-hidden">
+              <Tilt3D key={i} max={5} scale={1.01}>
+                <div className="glass-card rounded-2xl border border-border/50 overflow-hidden">
                 <div className={`h-1 bg-${project.color}`} />
                 <div className="p-6 md:p-8 space-y-6">
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
