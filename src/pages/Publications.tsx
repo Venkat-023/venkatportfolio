@@ -58,9 +58,6 @@ const Publications = () => {
                   </div>
                 </div>
 
-                {pub.authors && (
-                  <p className="text-sm text-foreground/80"><span className="text-muted-foreground">Authors: </span>{pub.authors}</p>
-                )}
                 {pub.venue && (
                   <p className="text-sm text-primary/90 font-medium">{pub.venue}</p>
                 )}
