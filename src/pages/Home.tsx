@@ -3,6 +3,7 @@ import { Github, Code2, Linkedin, FileText, Briefcase, Trophy, Award, ArrowRight
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import HeroScene from '@/components/three/HeroScene';
+import Tilt3D from '@/components/three/Tilt3D';
 
 const Home = () => {
   const [leetcodeCount, setLeetcodeCount] = useState(0);
