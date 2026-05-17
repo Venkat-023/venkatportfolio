@@ -1,64 +1,139 @@
-import { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Float, MeshDistortMaterial, Sparkles } from '@react-three/drei';
+import { Suspense, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Stars, Sparkles } from '@react-three/drei';
+import * as THREE from 'three';
 
 /**
- * Pleasant, calm 3D ambient backdrop — soft floating blobs + subtle sparkles.
- * No characters, no harsh wireframes. Sits behind all content site-wide.
+ * Interstellar / deep-space ambient backdrop.
+ * Layered starfields + a slowly rotating accretion-disk "wormhole" + nebula dust.
+ * No floating shapes in the foreground — content stays the hero.
  */
-const SoftBlob = ({
+
+const Wormhole = () => {
+  const disk = useRef<THREE.Mesh>(null);
+  const ring = useRef<THREE.Mesh>(null);
+  const glow = useRef<THREE.Mesh>(null);
+
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime();
+    if (disk.current) disk.current.rotation.z = t * 0.05;
+    if (ring.current) ring.current.rotation.z = -t * 0.03;
+    if (glow.current) {
+      const s = 1 + Math.sin(t * 0.6) * 0.04;
+      glow.current.scale.set(s, s, s);
+    }
+  });
+
+  return (
+    <group position={[3.5, -1.2, -14]} rotation={[Math.PI / 2.6, 0, 0.4]}>
+      {/* outer accretion disk */}
+      <mesh ref={disk}>
+        <ringGeometry args={[2.2, 4.6, 128]} />
+        <meshBasicMaterial
+          color="#ffb066"
+          transparent
+          opacity={0.35}
+          side={THREE.DoubleSide}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </mesh>
+      {/* inner hot ring */}
+      <mesh ref={ring}>
+        <ringGeometry args={[1.55, 2.3, 128]} />
+        <meshBasicMaterial
+          color="#9be8ff"
+          transparent
+          opacity={0.55}
+          side={THREE.DoubleSide}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </mesh>
+      {/* event horizon */}
+      <mesh>
+        <circleGeometry args={[1.45, 64]} />
+        <meshBasicMaterial color="#000000" />
+      </mesh>
+      {/* halo glow */}
+      <mesh ref={glow} rotation={[-Math.PI / 2.6, 0, 0]}>
+        <sphereGeometry args={[1.7, 32, 32]} />
+        <meshBasicMaterial
+          color="#00f0ff"
+          transparent
+          opacity={0.12}
+          blending={THREE.AdditiveBlending}
+          depthWrite={false}
+        />
+      </mesh>
+    </group>
+  );
+};
+
+const NebulaCloud = ({
   position,
   color,
-  scale = 1,
-  speed = 1.2,
+  scale = 6,
+  opacity = 0.18,
 }: {
   position: [number, number, number];
   color: string;
   scale?: number;
-  speed?: number;
+  opacity?: number;
 }) => (
-  <Float speed={speed} rotationIntensity={0.6} floatIntensity={1.4}>
-    <mesh position={position} scale={scale}>
-      <sphereGeometry args={[1, 64, 64]} />
-      <MeshDistortMaterial
-        color={color}
-        emissive={color}
-        emissiveIntensity={0.35}
-        roughness={0.25}
-        metalness={0.4}
-        distort={0.35}
-        speed={1.4}
-        transparent
-        opacity={0.32}
-      />
-    </mesh>
-  </Float>
+  <mesh position={position} scale={scale}>
+    <sphereGeometry args={[1, 32, 32]} />
+    <meshBasicMaterial
+      color={color}
+      transparent
+      opacity={opacity}
+      blending={THREE.AdditiveBlending}
+      depthWrite={false}
+    />
+  </mesh>
 );
+
+const DriftingStars = () => {
+  const ref = useRef<THREE.Group>(null);
+  useFrame((_, delta) => {
+    if (ref.current) ref.current.rotation.y += delta * 0.01;
+  });
+  return (
+    <group ref={ref}>
+      <Stars radius={120} depth={70} count={5500} factor={4} saturation={0} fade speed={0.3} />
+    </group>
+  );
+};
 
 const AmbientScene = () => {
   return (
     <div className="fixed inset-0 -z-10 pointer-events-none">
       <Canvas
         dpr={[1, 1.5]}
-        camera={{ position: [0, 0, 7], fov: 50 }}
+        camera={{ position: [0, 0, 6], fov: 55 }}
         gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
       >
         <Suspense fallback={null}>
-          <color attach="background" args={['#0a0a14']} />
-          <fog attach="fog" args={['#0a0a14', 10, 22]} />
+          <color attach="background" args={['#04040c']} />
+          <fog attach="fog" args={['#04040c', 14, 30]} />
 
-          <ambientLight intensity={0.5} />
-          <pointLight position={[6, 5, 5]} intensity={1.1} color="#00f0ff" />
-          <pointLight position={[-6, -3, 2]} intensity={0.9} color="#0066ff" />
-          <pointLight position={[0, -5, 3]} intensity={0.5} color="#ff6b35" />
+          <ambientLight intensity={0.3} />
 
-          <SoftBlob position={[-5.5, 2.2, -6]} color="#00f0ff" scale={0.9} speed={1} />
-          <SoftBlob position={[5.8, -1.8, -7]} color="#0066ff" scale={1.1} speed={0.9} />
-          <SoftBlob position={[-4.5, -2.6, -8]} color="#ff6b35" scale={0.7} speed={1.3} />
-          <SoftBlob position={[5, 2.8, -9]} color="#00f0ff" scale={0.8} speed={1.1} />
-          <SoftBlob position={[0, 0, -12]} color="#0066ff" scale={1.6} speed={0.7} />
+          {/* deep star layers */}
+          <DriftingStars />
+          <Stars radius={40} depth={20} count={1200} factor={2} saturation={0} fade speed={0.6} />
 
-          <Sparkles count={60} scale={[16, 12, 10]} size={2} speed={0.3} color="#9ee9ff" opacity={0.5} />
+          {/* nebula clouds — large, soft, additive */}
+          <NebulaCloud position={[-7, 3, -15]} color="#0066ff" scale={7} opacity={0.16} />
+          <NebulaCloud position={[8, -2, -18]} color="#00f0ff" scale={8} opacity={0.12} />
+          <NebulaCloud position={[-4, -5, -20]} color="#ff6b35" scale={6} opacity={0.1} />
+          <NebulaCloud position={[2, 6, -22]} color="#7a3aff" scale={9} opacity={0.1} />
+
+          {/* the wormhole / black hole centerpiece — far away, top-right */}
+          <Wormhole />
+
+          {/* cosmic dust drifting through space */}
+          <Sparkles count={120} scale={[24, 16, 14]} size={1.6} speed={0.25} color="#bfeaff" opacity={0.55} />
         </Suspense>
       </Canvas>
     </div>
