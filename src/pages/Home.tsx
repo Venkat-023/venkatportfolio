@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Github, Code2, Linkedin, FileText, Briefcase, Trophy, Award, ArrowRight, Server, Container, Layers, Brain, Target, Gauge, ExternalLink, ChevronRight, Zap, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import HeroScene from '@/components/three/HeroScene';
 import Tilt3D from '@/components/three/Tilt3D';
 
 const Home = () => {
@@ -77,9 +76,8 @@ const Home = () => {
     <div className="min-h-screen pt-20">
       {/* ===== HERO ===== */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        <HeroScene />
-        {/* radial vignette so hero copy stays legible over the 3D scene */}
-        <div className="absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,hsl(var(--background)/0.55)_55%,hsl(var(--background))_95%)] pointer-events-none" />
+        {/* soft gradient vignette for hero */}
+        <div className="absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08)_0%,transparent_60%)] pointer-events-none" />
         <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
