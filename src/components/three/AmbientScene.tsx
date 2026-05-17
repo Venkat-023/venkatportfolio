@@ -52,13 +52,13 @@ const AmbientScene = () => {
           <pointLight position={[-6, -3, 2]} intensity={0.9} color="#0066ff" />
           <pointLight position={[0, -5, 3]} intensity={0.5} color="#ff6b35" />
 
-          <SoftBlob position={[-3.8, 1.6, -2]} color="#00f0ff" scale={1.4} speed={1} />
-          <SoftBlob position={[4, -1.4, -3]} color="#0066ff" scale={1.8} speed={0.9} />
-          <SoftBlob position={[-2.5, -2.2, -4]} color="#ff6b35" scale={1.1} speed={1.3} />
-          <SoftBlob position={[3.2, 2.4, -5]} color="#00f0ff" scale={1} speed={1.1} />
-          <SoftBlob position={[0, 0, -7]} color="#0066ff" scale={2.2} speed={0.7} />
+          <SoftBlob position={[-5.5, 2.2, -6]} color="#00f0ff" scale={0.9} speed={1} />
+          <SoftBlob position={[5.8, -1.8, -7]} color="#0066ff" scale={1.1} speed={0.9} />
+          <SoftBlob position={[-4.5, -2.6, -8]} color="#ff6b35" scale={0.7} speed={1.3} />
+          <SoftBlob position={[5, 2.8, -9]} color="#00f0ff" scale={0.8} speed={1.1} />
+          <SoftBlob position={[0, 0, -12]} color="#0066ff" scale={1.6} speed={0.7} />
 
-          <Sparkles count={80} scale={[14, 10, 8]} size={2.4} speed={0.4} color="#9ee9ff" opacity={0.6} />
+          <Sparkles count={60} scale={[16, 12, 10]} size={2} speed={0.3} color="#9ee9ff" opacity={0.5} />
         </Suspense>
       </Canvas>
     </div>
