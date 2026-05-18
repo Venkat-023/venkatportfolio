@@ -1,12 +1,14 @@
 import { Download, Github, Code2, Linkedin, Mail, Phone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Tilt3D from '@/components/three/Tilt3D';
 
 const Resume = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4 max-w-5xl">
+    <div className="min-h-screen pt-24 pb-16 [perspective:1400px]">
+      <div className="container mx-auto px-4 max-w-5xl space-y-8">
         {/* Header */}
-        <div className="glass-card p-8 rounded-2xl mb-8 text-center space-y-4">
+        <Tilt3D max={6} scale={1.01}>
+        <div className="glass-card p-8 rounded-2xl text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-gradient-cyan">
             Venkat Baba Yemineni
           </h1>
@@ -48,9 +50,11 @@ const Resume = () => {
             </Button>
           </a>
         </div>
+        </Tilt3D>
 
         {/* Education */}
-        <div className="glass-card p-8 rounded-2xl mb-8 animate-fade-in">
+        <Tilt3D max={6} scale={1.01}>
+        <div className="glass-card p-8 rounded-2xl animate-fade-in">
           <h2 className="text-3xl font-display font-bold mb-6 text-gradient-cyan">Education</h2>
           <div className="space-y-2">
             <h3 className="text-xl font-semibold text-foreground">Bachelor of Engineering: Computer Science</h3>
@@ -58,9 +62,11 @@ const Resume = () => {
             <p className="text-muted-foreground">Chaithanya Layout, 8th Phase, J.P • 2023-2027</p>
           </div>
         </div>
+        </Tilt3D>
 
         {/* Skills */}
-        <div className="glass-card p-8 rounded-2xl mb-8 animate-fade-in">
+        <Tilt3D max={6} scale={1.01}>
+        <div className="glass-card p-8 rounded-2xl animate-fade-in">
           <h2 className="text-3xl font-display font-bold mb-6 text-gradient-cyan">Skills</h2>
           <div className="space-y-6">
             <div>
@@ -93,9 +99,11 @@ const Resume = () => {
             </div>
           </div>
         </div>
+        </Tilt3D>
 
         {/* Projects */}
-        <div className="glass-card p-8 rounded-2xl mb-8 animate-fade-in">
+        <Tilt3D max={6} scale={1.01}>
+        <div className="glass-card p-8 rounded-2xl animate-fade-in">
           <h2 className="text-3xl font-display font-bold mb-6 text-gradient-cyan">Featured Projects</h2>
           <div className="space-y-8">
             <div className="border-l-4 border-primary pl-6">
@@ -129,9 +137,11 @@ const Resume = () => {
             </div>
           </div>
         </div>
+        </Tilt3D>
 
         {/* Achievements */}
-        <div className="glass-card p-8 rounded-2xl mb-8 animate-fade-in">
+        <Tilt3D max={6} scale={1.01}>
+        <div className="glass-card p-8 rounded-2xl animate-fade-in">
           <h2 className="text-3xl font-display font-bold mb-6 text-gradient-cyan">Achievements</h2>
           <ul className="space-y-4 text-muted-foreground">
             <li className="flex items-start gap-3">
@@ -164,8 +174,10 @@ const Resume = () => {
             </li>
           </ul>
         </div>
+        </Tilt3D>
 
         {/* Volunteer Experience */}
+        <Tilt3D max={6} scale={1.01}>
         <div className="glass-card p-8 rounded-2xl animate-fade-in">
           <h2 className="text-3xl font-display font-bold mb-6 text-gradient-cyan">Volunteer Experience</h2>
           <div className="flex items-start gap-4">
@@ -176,6 +188,7 @@ const Resume = () => {
             </div>
           </div>
         </div>
+        </Tilt3D>
       </div>
     </div>
   );
