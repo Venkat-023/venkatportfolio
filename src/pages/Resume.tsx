@@ -50,9 +50,11 @@ const Resume = () => {
             </Button>
           </a>
         </div>
+        </Tilt3D>
 
         {/* Education */}
-        <div className="glass-card p-8 rounded-2xl mb-8 animate-fade-in">
+        <Tilt3D max={6} scale={1.01}>
+        <div className="glass-card p-8 rounded-2xl animate-fade-in">
           <h2 className="text-3xl font-display font-bold mb-6 text-gradient-cyan">Education</h2>
           <div className="space-y-2">
             <h3 className="text-xl font-semibold text-foreground">Bachelor of Engineering: Computer Science</h3>
