@@ -1,12 +1,14 @@
 import { Download, Github, Code2, Linkedin, Mail, Phone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Tilt3D from '@/components/three/Tilt3D';
 
 const Resume = () => {
   return (
-    <div className="min-h-screen pt-24 pb-16">
-      <div className="container mx-auto px-4 max-w-5xl">
+    <div className="min-h-screen pt-24 pb-16 [perspective:1400px]">
+      <div className="container mx-auto px-4 max-w-5xl space-y-8">
         {/* Header */}
-        <div className="glass-card p-8 rounded-2xl mb-8 text-center space-y-4">
+        <Tilt3D max={6} scale={1.01}>
+        <div className="glass-card p-8 rounded-2xl text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-display font-bold text-gradient-cyan">
             Venkat Baba Yemineni
           </h1>
