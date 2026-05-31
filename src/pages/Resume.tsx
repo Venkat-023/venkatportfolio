@@ -19,6 +19,7 @@ import { Button } from '@/components/ui/button';
 import Tilt3D from '@/components/three/Tilt3D';
 
 const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
+const profileImageUrl = `${import.meta.env.BASE_URL}venkat-profile.png`;
 
 const skills = [
   ['Languages', ['Python', 'Java']],
@@ -95,18 +96,17 @@ const Resume = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  ['900+', 'LeetCode'],
-                  ['25+', 'AI Projects'],
-                  ['8.23', 'CGPA'],
-                  ['AI Intern', 'GoAi'],
-                ].map(([value, label]) => (
-                  <div key={label} className="rounded-2xl border border-border/50 bg-gradient-to-br from-primary/12 via-muted/35 to-accent/10 p-5 text-center shadow-[0_16px_40px_hsl(var(--primary)/0.08)]">
-                    <p className="text-2xl md:text-3xl font-display font-bold text-primary">{value}</p>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground mt-1">{label}</p>
-                  </div>
-                ))}
+              <div className="relative mx-auto w-full max-w-sm">
+                <div className="absolute -inset-4 rounded-[2rem] bg-[radial-gradient(circle_at_20%_15%,hsl(100_80%_55%/0.24),transparent_38%),radial-gradient(circle_at_90%_20%,hsl(var(--primary)/0.28),transparent_34%),linear-gradient(135deg,hsl(var(--primary)/0.18),hsl(var(--accent)/0.12))] blur-xl" />
+                <div className="relative overflow-hidden rounded-[1.75rem] border border-primary/35 bg-gradient-to-br from-primary/15 via-card/70 to-accent/10 p-2 shadow-[0_28px_90px_hsl(var(--primary)/0.18),inset_0_1px_0_hsl(var(--foreground)/0.16)]">
+                  <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(var(--primary)/0.18),transparent_38%,hsl(100_80%_55%/0.12))]" />
+                  <img
+                    src={profileImageUrl}
+                    alt="Venkat Baba Yemineni"
+                    className="relative aspect-[4/5] w-full rounded-[1.35rem] object-cover object-[50%_28%] shadow-[inset_0_0_0_1px_hsl(var(--foreground)/0.12)]"
+                  />
+                  <div className="pointer-events-none absolute inset-2 rounded-[1.35rem] ring-1 ring-white/15" />
+                </div>
               </div>
             </div>
 
