@@ -21,7 +21,6 @@ const Navigation = () => {
     { to: '/projects', label: 'Projects' },
     { to: '/achievements', label: 'Achievements' },
     { to: '/publications', label: 'Publications' },
-    { to: '/biodata', label: 'Bio-data' },
     { to: '/contact', label: 'Contact' },
   ];
 
