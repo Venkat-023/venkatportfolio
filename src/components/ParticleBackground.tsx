@@ -21,8 +21,8 @@ const ParticleBackground = () => {
       size: number;
     }> = [];
 
-    const particleCount = 80;
-    const colors = ['rgba(0, 240, 255, 0.5)', 'rgba(0, 102, 255, 0.5)', 'rgba(255, 107, 53, 0.3)'];
+    const particleCount = 95;
+    const colors = ['rgba(0, 240, 255, 0.65)', 'rgba(70, 150, 255, 0.55)', 'rgba(255, 107, 53, 0.45)', 'rgba(130, 245, 255, 0.45)'];
 
     // Create particles
     for (let i = 0; i < particleCount; i++) {
@@ -36,7 +36,7 @@ const ParticleBackground = () => {
     }
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(15, 15, 26, 0.1)';
+      ctx.fillStyle = 'rgba(18, 22, 42, 0.08)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle, i) => {
@@ -60,7 +60,7 @@ const ParticleBackground = () => {
 
           if (distance < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 240, 255, ${0.2 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(0, 240, 255, ${0.26 * (1 - distance / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
@@ -89,7 +89,7 @@ const ParticleBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full -z-10 opacity-60"
+      className="fixed top-0 left-0 w-full h-full -z-10 opacity-75"
       style={{ pointerEvents: 'none' }}
     />
   );
