@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import ParticleBackground from "./components/ParticleBackground";
 import Home from "./pages/Home";
@@ -28,6 +28,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
+            <Route path="/biodata" element={<Navigate to="/resume" replace />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/achievements" element={<Achievements />} />
